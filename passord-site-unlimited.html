@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Krever Passord</title>
+</head>
+<script>
+    const passordSidePassord = "utvikling"
+    // Til å få unlimited passord attempts trenger vi bare å sette passordSideAttempts til -1. Bruk av -1 = unlimited er veldig vanelig.
+    let passordSideAttempts = -1
+    let passordSuccess = false
+
+    onload = () => {
+        while (passordSideAttempts !== 0 && passordSuccess === false) {
+            let passordInput = window.prompt("Please enter the password for this website:")
+            if (passordInput === passordSidePassord) {
+                passordSuccess = true
+            } else {
+                passordSideAttempts--
+            }
+        }
+        // Hvis enten passordet er riktig, eller man ikke har nok passord forsøk igjen. Kjører denne if statementen.
+        // Den bestemmer hvilken HTML element som skal vises til deg på siden.
+        if (passordSuccess) {
+            document.getElementById("passordResultat").hidden = false;
+        } else {
+            document.getElementById("passordFailed").hidden = false;
+        }
+
+    }
+</script>
+<body>
+    <h1 id="passordResultat" hidden >200 OK Password correct!</h1>
+    <h1 id="passordFailed" hidden >404 Unauthorised. Wrong password.</h1>
+</body>
+</html>
