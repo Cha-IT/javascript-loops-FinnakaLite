@@ -54,4 +54,14 @@ function oppFire() {
     }
     console.log(oppFireArray)
 
+    // Printing av resultatene til HTML
+    let oppFireHtmlString = "<ul>"
+    let oppFireContainer = document.getElementById("oppFireContainer")
+
+    oppFireArray.forEach(item => {
+        oppFireHtmlString += `<li>${item.join(", " )}</li>`;
+    })
+    oppFireHtmlString += `</ul>`
+    oppFireContainer.innerHTML = oppFireHtmlString;
+
 }
