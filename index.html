@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+
+    }
+
+    div {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+</style>
+<body>
+    <script src="app.js"></script>
+    <div>
+        <button onclick="oppEna()">Oppgave 1a</button>
+        <p id="opp1aDisplay"></p>
+        <button onclick="oppEnb()">Oppgave 1b</button>
+        <p id="opp1bDisplay"></p>
+    </div>
+    <div>
+        <a href="passord-site.html"><button>Oppgave 2a</button></a>
+        <a href="passord-site-unlimited.html"><button>Oppgave 2b</button></a>
+    </div>
+    <div>
+        <button onclick="oppTre(0)">Oppgave 3 Oddetall</button>
+        <button onclick="oppTre(1)">Oppgave 3 Partall</button>
+        <p id="oppTreResultat"></p>
+    </div>
+    <div>
+        <button onclick="oppFire()">Oppgave 4 Regn ut Gangetabellen</button>
+        <ul id="oppFireContainer"></ul>
+    </div>
+</body>
+</html>
