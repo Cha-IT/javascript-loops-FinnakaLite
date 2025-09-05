@@ -39,3 +39,19 @@ function oppTre(oddOrEven) {
     console.log(oppTreArray)
     document.getElementById("oppTreResultat").innerHTML = oppTreArray.join(", ");
 }
+
+function oppFire() {
+    let oppFireArray = new Array(0)
+
+    for (let oppFireCounterY = 1; oppFireCounterY <= 10; oppFireCounterY++) {
+        let oppFireNestedArray = new Array(0)
+
+        for (let oppFireCounterX = 1; oppFireCounterX <= 10; oppFireCounterX++) {
+            oppFireNestedArray.push(oppFireCounterX * oppFireCounterY)
+        }
+
+        oppFireArray.push(oppFireNestedArray)
+    }
+    console.log(oppFireArray)
+
+}
