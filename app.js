@@ -23,3 +23,19 @@ function oppEnb() {
     console.log(oppEnbArray)
     document.getElementById("opp1bDisplay").innerHTML = oppEnbArray.join(", ");
 }
+
+// Bruker en variable innenfor functionen for å sleppe å ha to forsjellige funktion til oddetall og partall
+function oppTre(oddOrEven) {
+    let oppTreArray = new Array(0)
+    for (let opp3Counter = 1; opp3Counter <= 100; opp3Counter++) {
+        if (opp3Counter % 2 === 0 && oddOrEven === 1) {
+            oppTreArray.push(opp3Counter)
+        } else if (opp3Counter % 2 !== 0 && oddOrEven === 0) {
+            oppTreArray.push(opp3Counter)
+        } else {
+
+        }
+    }
+    console.log(oppTreArray)
+    document.getElementById("oppTreResultat").innerHTML = oppTreArray.join(", ");
+}
